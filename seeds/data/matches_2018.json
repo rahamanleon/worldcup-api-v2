@@ -1,0 +1,100 @@
+[
+  {
+    "external_id": "2018-001", "stage": "group", "group_name": "A",
+    "home_team": "RUS", "away_team": "KSA",
+    "home_score": 5, "away_score": 0, "status": "finished",
+    "match_date": "2018-06-14T15:00:00Z",
+    "venue": "Luzhniki Stadium", "city": "Moscow"
+  },
+  {
+    "external_id": "2018-002", "stage": "group", "group_name": "A",
+    "home_team": "URU", "away_team": "ECU",
+    "home_score": 1, "away_score": 0, "status": "finished",
+    "match_date": "2018-06-15T12:00:00Z",
+    "venue": "Fisht Stadium", "city": "Sochi"
+  },
+  {
+    "external_id": "2018-003", "stage": "group", "group_name": "B",
+    "home_team": "POR", "away_team": "ESP",
+    "home_score": 3, "away_score": 3, "status": "finished",
+    "match_date": "2018-06-15T18:00:00Z",
+    "venue": "Fisht Stadium", "city": "Sochi"
+  },
+  {
+    "external_id": "2018-004", "stage": "group", "group_name": "C",
+    "home_team": "FRA", "away_team": "AUS",
+    "home_score": 2, "away_score": 1, "status": "finished",
+    "match_date": "2018-06-16T10:00:00Z",
+    "venue": "Kazan Arena", "city": "Kazan"
+  },
+  {
+    "external_id": "2018-005", "stage": "group", "group_name": "D",
+    "home_team": "ARG", "away_team": "ISL",
+    "home_score": 1, "away_score": 1, "status": "finished",
+    "match_date": "2018-06-16T13:00:00Z",
+    "venue": "Spartak Stadium", "city": "Moscow"
+  },
+  {
+    "external_id": "2018-006", "stage": "group", "group_name": "E",
+    "home_team": "BRA", "away_team": "SUI",
+    "home_score": 1, "away_score": 1, "status": "finished",
+    "match_date": "2018-06-17T20:00:00Z",
+    "venue": "Rostov Arena", "city": "Rostov-on-Don"
+  },
+  {
+    "external_id": "2018-007", "stage": "group", "group_name": "F",
+    "home_team": "GER", "away_team": "MEX",
+    "home_score": 0, "away_score": 1, "status": "finished",
+    "match_date": "2018-06-17T17:00:00Z",
+    "venue": "Luzhniki Stadium", "city": "Moscow"
+  },
+  {
+    "external_id": "2018-008", "stage": "group", "group_name": "G",
+    "home_team": "BEL", "away_team": "PAN",
+    "home_score": 3, "away_score": 0, "status": "finished",
+    "match_date": "2018-06-18T17:00:00Z",
+    "venue": "Fisht Stadium", "city": "Sochi"
+  },
+  {
+    "external_id": "2018-009", "stage": "group", "group_name": "H",
+    "home_team": "POL", "away_team": "SEN",
+    "home_score": 1, "away_score": 2, "status": "finished",
+    "match_date": "2018-06-19T14:00:00Z",
+    "venue": "Spartak Stadium", "city": "Moscow"
+  },
+  {
+    "external_id": "2018-010", "stage": "group", "group_name": "H",
+    "home_team": "COL", "away_team": "JPN",
+    "home_score": 1, "away_score": 2, "status": "finished",
+    "match_date": "2018-06-19T17:00:00Z",
+    "venue": "Mordovia Arena", "city": "Saransk"
+  },
+  {
+    "external_id": "2018-061", "stage": "semi_final", "group_name": null,
+    "home_team": "FRA", "away_team": "BEL",
+    "home_score": 1, "away_score": 0, "status": "finished",
+    "match_date": "2018-07-10T19:00:00Z",
+    "venue": "Saint Petersburg Stadium", "city": "Saint Petersburg"
+  },
+  {
+    "external_id": "2018-062", "stage": "semi_final", "group_name": null,
+    "home_team": "CRO", "away_team": "ENG",
+    "home_score": 2, "away_score": 1, "status": "finished",
+    "match_date": "2018-07-11T19:00:00Z",
+    "venue": "Luzhniki Stadium", "city": "Moscow"
+  },
+  {
+    "external_id": "2018-063", "stage": "third_place", "group_name": null,
+    "home_team": "BEL", "away_team": "ENG",
+    "home_score": 2, "away_score": 0, "status": "finished",
+    "match_date": "2018-07-14T15:00:00Z",
+    "venue": "Saint Petersburg Stadium", "city": "Saint Petersburg"
+  },
+  {
+    "external_id": "2018-064", "stage": "final", "group_name": null,
+    "home_team": "FRA", "away_team": "CRO",
+    "home_score": 4, "away_score": 2, "status": "finished",
+    "match_date": "2018-07-15T15:00:00Z",
+    "venue": "Luzhniki Stadium", "city": "Moscow"
+  }
+]

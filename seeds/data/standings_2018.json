@@ -1,0 +1,41 @@
+[
+  { "group": "A", "team": "URU", "played": 3, "won": 3, "drawn": 0, "lost": 0, "goals_for": 7,  "goals_against": 0, "points": 9 },
+  { "group": "A", "team": "RUS", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 8,  "goals_against": 4, "points": 6 },
+  { "group": "A", "team": "KSA", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 2,  "goals_against": 7, "points": 3 },
+  { "group": "A", "team": "ECU", "played": 3, "won": 0, "drawn": 0, "lost": 3, "goals_for": 2,  "goals_against": 6, "points": 0 },
+
+  { "group": "B", "team": "ESP", "played": 3, "won": 2, "drawn": 1, "lost": 0, "goals_for": 6,  "goals_against": 5, "points": 7 },
+  { "group": "B", "team": "POR", "played": 3, "won": 2, "drawn": 1, "lost": 0, "goals_for": 8,  "goals_against": 4, "points": 7 },
+  { "group": "B", "team": "IRN", "played": 3, "won": 1, "drawn": 1, "lost": 1, "goals_for": 2,  "goals_against": 2, "points": 4 },
+  { "group": "B", "team": "MAR", "played": 3, "won": 0, "drawn": 0, "lost": 3, "goals_for": 2,  "goals_against": 5, "points": 0 },
+
+  { "group": "C", "team": "FRA", "played": 3, "won": 2, "drawn": 1, "lost": 0, "goals_for": 3,  "goals_against": 1, "points": 7 },
+  { "group": "C", "team": "DEN", "played": 3, "won": 1, "drawn": 2, "lost": 0, "goals_for": 2,  "goals_against": 1, "points": 5 },
+  { "group": "C", "team": "PER", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 2,  "goals_against": 2, "points": 3 },
+  { "group": "C", "team": "AUS", "played": 3, "won": 0, "drawn": 1, "lost": 2, "goals_for": 2,  "goals_against": 5, "points": 1 },
+
+  { "group": "D", "team": "CRO", "played": 3, "won": 3, "drawn": 0, "lost": 0, "goals_for": 7,  "goals_against": 1, "points": 9 },
+  { "group": "D", "team": "ARG", "played": 3, "won": 1, "drawn": 1, "lost": 1, "goals_for": 3,  "goals_against": 5, "points": 4 },
+  { "group": "D", "team": "NGR", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 3,  "goals_against": 4, "points": 3 },
+  { "group": "D", "team": "ISL", "played": 3, "won": 0, "drawn": 1, "lost": 2, "goals_for": 2,  "goals_against": 5, "points": 1 },
+
+  { "group": "E", "team": "BRA", "played": 3, "won": 2, "drawn": 1, "lost": 0, "goals_for": 8,  "goals_against": 2, "points": 7 },
+  { "group": "E", "team": "SUI", "played": 3, "won": 2, "drawn": 1, "lost": 0, "goals_for": 5,  "goals_against": 4, "points": 7 },
+  { "group": "E", "team": "SRB", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 2,  "goals_against": 4, "points": 3 },
+  { "group": "E", "team": "CRC", "played": 3, "won": 0, "drawn": 0, "lost": 3, "goals_for": 2,  "goals_against": 7, "points": 0 },
+
+  { "group": "F", "team": "GER", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 2,  "goals_against": 4, "points": 3 },
+  { "group": "F", "team": "MEX", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 3,  "goals_against": 4, "points": 6 },
+  { "group": "F", "team": "SWE", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 6,  "goals_against": 2, "points": 6 },
+  { "group": "F", "team": "KOR", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 3,  "goals_against": 3, "points": 3 },
+
+  { "group": "G", "team": "BEL", "played": 3, "won": 3, "drawn": 0, "lost": 0, "goals_for": 9,  "goals_against": 2, "points": 9 },
+  { "group": "G", "team": "ENG", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 8,  "goals_against": 3, "points": 6 },
+  { "group": "G", "team": "TUN", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 5,  "goals_against": 8, "points": 3 },
+  { "group": "G", "team": "PAN", "played": 3, "won": 0, "drawn": 0, "lost": 3, "goals_for": 2,  "goals_against": 11,"points": 0 },
+
+  { "group": "H", "team": "COL", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 6,  "goals_against": 2, "points": 6 },
+  { "group": "H", "team": "JPN", "played": 3, "won": 2, "drawn": 0, "lost": 1, "goals_for": 6,  "goals_against": 6, "points": 6 },
+  { "group": "H", "team": "SEN", "played": 3, "won": 1, "drawn": 1, "lost": 1, "goals_for": 4,  "goals_against": 4, "points": 4 },
+  { "group": "H", "team": "POL", "played": 3, "won": 1, "drawn": 0, "lost": 2, "goals_for": 2,  "goals_against": 5, "points": 3 }
+]

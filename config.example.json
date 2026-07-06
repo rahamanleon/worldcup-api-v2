@@ -1,0 +1,36 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "nodeEnv": "production"
+  },
+  "database": {
+    "url": "postgresql://user:password@localhost:5432/worldcup",
+    "poolMin": 2,
+    "poolMax": 10,
+    "ssl": false
+  },
+  "cache": {
+    "liveTtlSeconds": 30,
+    "standingsTtlSeconds": 300,
+    "matchTtlSeconds": 60,
+    "teamTtlSeconds": 3600
+  },
+  "live": {
+    "pollIntervalSeconds": 30,
+    "enabled": true,
+    "provider": "stub",
+    "maxRetries": 3,
+    "backoffBaseMs": 1000
+  },
+  "auth": {
+    "adminToken": "REPLACE_WITH_STRONG_SECRET"
+  },
+  "pagination": {
+    "defaultLimit": 20,
+    "maxLimit": 100
+  },
+  "logging": {
+    "level": "info"
+  }
+}
