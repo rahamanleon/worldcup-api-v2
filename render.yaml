@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: worldcup-api-v2
+    env: node
+    region: ohio
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: LIVE_PROVIDER
+        value: stub
+    healthCheckPath: /health
+    autoDeploy: true
+    postDeploy:
+      - npm run migrate
+      - npm run seed
