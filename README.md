@@ -1,6 +1,8 @@
-# World Cup API
+# World Cup API v2
 
 Free, open REST API for FIFA World Cup historical data and live scores.
+
+🌐 **Live:** [https://worldcup-api-v2.onrender.com](https://worldcup-api-v2.onrender.com)
 
 ## Stack
 
@@ -8,33 +10,41 @@ Free, open REST API for FIFA World Cup historical data and live scores.
 - PostgreSQL (any free-tier: Supabase, Neon, Render)
 - In-memory TTL cache (swap-ready for Redis/Cloudflare KV)
 
-## Setup
+## Quick Start
 
 ```bash
 # 1. Install dependencies
 npm install
 
-# 2. Copy and edit config
+# 2. Configure
 cp config.example.json config.json
-# Edit config.json: set database.url and auth.adminToken
 
-# 3. Run migrations
-npm run migrate
+# 3. Run migrations & seed data
+npm run setup
 
-# 4. Seed historical data
-npm run seed
-
-# 5. Start server
+# 4. Start server
 npm start
-
-# Development (auto-restart)
-npm run dev
 ```
+
+### Configuration via Environment Variables
+
+All config values can be overridden with environment variables — ideal for Render, Docker, and CI/CD:
+
+| Env Var            | Overrides              |
+|--------------------|------------------------|
+| `PORT`             | `server.port`          |
+| `HOST`             | `server.host`          |
+| `NODE_ENV`         | `server.nodeEnv`       |
+| `DATABASE_URL`     | `database.url`         |
+| `ADMIN_TOKEN`      | `auth.adminToken`      |
+| `LIVE_PROVIDER`    | `live.provider`        |
+| `LOG_LEVEL`        | `logging.level`        |
 
 ## Endpoints
 
 | Method | Path                              | Description                        |
 |--------|-----------------------------------|------------------------------------|
+| GET    | /                                 | API info + available endpoints     |
 | GET    | /health                           | Health check + DB status           |
 | GET    | /api/v1/tournaments               | All World Cup tournaments          |
 | GET    | /api/v1/tournaments/:year         | Tournament by year                 |
@@ -47,46 +57,42 @@ npm run dev
 | GET    | /api/v1/groups/:year/:group       | Single group table (A–H)           |
 | GET    | /api/v1/search?q=                 | Search teams and matches           |
 
-### Match filters
-
-```
-GET /api/v1/matches?tournament=2022&stage=group&status=finished&sort=match_date&order=ASC&page=1&limit=20
-```
-
 ### Admin (Bearer token required)
 
 ```bash
-# Trigger live ingestion manually
 curl -X POST /api/v1/admin/ingest \
-  -H "Authorization: Bearer YOUR_ADMIN_TOKEN"
+  -H "Authorization: Bearer $ADMIN_TOKEN"
 
-# Flush cache
 curl -X POST /api/v1/admin/cache/flush \
-  -H "Authorization: Bearer YOUR_ADMIN_TOKEN"
+  -H "Authorization: Bearer $ADMIN_TOKEN"
 ```
 
 ## Live Providers
 
-Set `live.provider` in `config.json`:
+| Provider         | Description                                    |
+|------------------|------------------------------------------------|
+| `stub`           | Synthetic data — no external calls (default)   |
+| `football-data`  | football-data.org free tier (requires API key) |
 
-| Value            | Description                                      |
-|------------------|--------------------------------------------------|
-| `stub`           | Synthetic data — no external calls (default)     |
-| `football-data`  | football-data.org free tier (requires API key)   |
-
-To add a new provider, implement `src/providers/providerInterface.js` and register it in `src/providers/index.js`.
-
-## Deploy to Render (free tier)
+## Deploy to Render
 
 1. Push repo to GitHub
-2. Create a new **Web Service** on Render pointing to your repo
-3. Set **Start command**: `npm start`
-4. Add a **PostgreSQL** database (free tier)
-5. Set environment variable `DATABASE_URL` — or mount `config.json` as a secret file
+2. Create a new **Web Service** on Render
+3. **Build Command:** `npm install`
+4. **Start Command:** `npm start`
+5. Add a **PostgreSQL** database
+6. Set env vars: `DATABASE_URL`, `ADMIN_TOKEN`, `NODE_ENV=production`
 
-## Adding More Match Data
+## Docker
 
-Drop additional `seeds/data/matches_YYYY.json` or `seeds/data/standings_YYYY.json` files following the existing format, then re-run:
+```bash
+docker build -t worldcup-api-v2 .
+docker run -p 3000:3000 -e DATABASE_URL=... -e ADMIN_TOKEN=... worldcup-api-v2
+```
+
+## Adding Match Data
+
+Drop `seeds/data/matches_YYYY.json` or `seeds/data/standings_YYYY.json` files, then:
 
 ```bash
 npm run seed
