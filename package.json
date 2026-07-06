@@ -1,6 +1,6 @@
 {
   "name": "worldcup-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Free FIFA World Cup REST API — historical archive + live scores",
   "main": "src/index.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "seed": "node seeds/run.js",
     "setup": "npm run migrate && npm run seed",
     "import": "node scripts/import.js",
-    "smoke-test": "node scripts/smoke-test.js"
+    "smoke-test": "node scripts/smoke-test.js",
+    "docker:build": "docker build -t worldcup-api-v2 .",
+    "docker:run": "docker run -p 3000:3000 -e DATABASE_URL -e ADMIN_TOKEN worldcup-api-v2"
   },
   "dependencies": {
     "express": "^4.18.2",
