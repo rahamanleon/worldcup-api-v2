@@ -5,10 +5,12 @@
     "nodeEnv": "production"
   },
   "database": {
-    "url": "postgresql://user:password@localhost:5432/worldcup",
+    "url": "postgresql://neondb_owner:npg_M6HrxXKj5ziW@ep-young-frost-aonmuo2k.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require",
     "poolMin": 2,
     "poolMax": 10,
-    "ssl": false
+    "ssl": false,
+    "connectionTimeoutMs": 10000,
+    "idleTimeoutMs": 30000
   },
   "cache": {
     "liveTtlSeconds": 30,
@@ -17,18 +19,23 @@
     "teamTtlSeconds": 3600
   },
   "live": {
-    "pollIntervalSeconds": 30,
     "enabled": true,
     "provider": "stub",
+    "pollIntervalSeconds": 30,
+    "requestTimeoutMs": 10000,
     "maxRetries": 3,
     "backoffBaseMs": 1000
   },
   "auth": {
-    "adminToken": "REPLACE_WITH_STRONG_SECRET"
+    "adminToken": "d4f9b3c9e7a81d5f2c6b4a9e8f1d7c3b5a6e9f0c2d4b6a8e1f3c5d7b9a0e2f4"
   },
   "pagination": {
     "defaultLimit": 20,
     "maxLimit": 100
+  },
+  "rateLimit": {
+    "windowMinutes": 1,
+    "maxRequests": 100
   },
   "logging": {
     "level": "info"
