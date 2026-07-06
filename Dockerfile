@@ -19,8 +19,8 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# config.json must be mounted as a secret/volume at runtime.
-# It is NOT baked into the image.
+# Remove config.json (keep config.example.json as fallback).
+# Credentials MUST come from environment variables (DATABASE_URL, ADMIN_TOKEN, etc.)
 RUN rm -f config.json
 
 USER appuser
