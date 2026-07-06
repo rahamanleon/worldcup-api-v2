@@ -1,0 +1,43 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "nodeEnv": "production"
+  },
+  "database": {
+    "url": "postgresql://user:password@host:5432/database?sslmode=require",
+    "poolMin": 2,
+    "poolMax": 10,
+    "ssl": false,
+    "connectionTimeoutMs": 10000,
+    "idleTimeoutMs": 30000
+  },
+  "cache": {
+    "liveTtlSeconds": 30,
+    "standingsTtlSeconds": 300,
+    "matchTtlSeconds": 60,
+    "teamTtlSeconds": 3600
+  },
+  "live": {
+    "enabled": true,
+    "provider": "stub",
+    "pollIntervalSeconds": 30,
+    "requestTimeoutMs": 10000,
+    "maxRetries": 3,
+    "backoffBaseMs": 1000
+  },
+  "auth": {
+    "adminToken": "change-me-to-a-secure-random-token"
+  },
+  "pagination": {
+    "defaultLimit": 20,
+    "maxLimit": 100
+  },
+  "rateLimit": {
+    "windowMinutes": 1,
+    "maxRequests": 100
+  },
+  "logging": {
+    "level": "info"
+  }
+}
