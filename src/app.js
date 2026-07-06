@@ -20,6 +20,27 @@ function createApp() {
   // ── Request logging ───────────────────────────────────────────────────────
   app.use(requestLogger);
 
+  // ── Root endpoint — API info ──────────────────────────────────────────────
+  app.get('/', (req, res) => {
+    res.json({
+      name: 'World Cup API',
+      version: '2.0.0',
+      description: 'Free FIFA World Cup REST API — historical archive + live scores',
+      docs: 'https://github.com/rahamanleon/worldcup-api-v2',
+      endpoints: {
+        health:       '/health',
+        tournaments:  '/api/v1/tournaments',
+        teams:        '/api/v1/teams',
+        matches:      '/api/v1/matches',
+        live:         '/api/v1/live',
+        standings:    '/api/v1/standings/:year',
+        groups:       '/api/v1/groups/:year/:group',
+        search:       '/api/v1/search?q=',
+        admin:        '/api/v1/admin',
+      },
+    });
+  });
+
   // ── Routes ────────────────────────────────────────────────────────────────
   app.use('/health',    healthRouter);
   app.use('/api/v1',    v1Routes);
